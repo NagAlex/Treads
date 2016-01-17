@@ -35,10 +35,8 @@ public class ImageCrawler {
         Page page = new Page(new URL(urlToPage));
         Collection<URL> imgCollection = page.getImageLinks();
         for(URL imageLink: imgCollection) {
-            //System.out.println(imageLink.toString());
             if (isImageURL(imageLink)) executorService.execute(new ImageTask(imageLink, folder));
         }
-        //implement me
     }
 
     /**
@@ -50,7 +48,6 @@ public class ImageCrawler {
 
     //detects is current url is an image. Checking for popular extensions should be enough
     private boolean isImageURL(URL url) {
-        //implement me
         Pattern img = Pattern.compile("jpg|JPG|bmp|BMP|png|PNG|gif|GIF");
         Matcher imgMatch = img.matcher(url.toString());
         if(imgMatch.find()) return true;

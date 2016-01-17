@@ -35,8 +35,6 @@ public class ImageTask implements Runnable {
         } catch (IOException e) {
             System.out.println("Can't connect through proxy");
         }
-
-       //implement me
     }
 
     //converts URL to unique file name

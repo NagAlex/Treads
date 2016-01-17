@@ -28,8 +28,6 @@ public class ConnectionUtils {
         } catch (IOException e) {
             System.out.println("Error opening Input Stream");
         }
-        //System.out.println(content);
-        //implement me
         return content.toString().getBytes();
     }
 }
